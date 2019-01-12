@@ -61,7 +61,7 @@ function generate(specPath, options) {
           }
 
           compiled.forEach(function (testObj, ndx, arr) {
-            fs.writeFile(join(options.writeTo, testObj.filename),
+            fs.writeFileSync(join(options.writeTo, testObj.filename),
                 testObj.contents, function (err) {
                   if (err !== null) {
                     console.error(err)
